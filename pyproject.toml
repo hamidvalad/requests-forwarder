@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "requests-forwarder"
+version = "1.0.0"
+description = "Route any requests-based HTTP traffic through a forwarder service. Works with any API (not limited to Telegram)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+authors = [
+    { name = "Hamidvalad.ir" },
+]
+keywords = [
+    "proxy",
+    "forwarder",
+    "proxy",
+    "forwarder",
+    "api-proxy",
+    "http-forwarder",
+    "requests-proxy",
+    "relay",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Chat",
+    "Topic :: Internet :: Proxy Servers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.20",
+]
+
+[project.optional-dependencies]
+telebot = ["pyTelegramBotAPI>=3.0"]
+dev = [
+    "pyTelegramBotAPI>=4.0",
+    "pytest>=7.0",
+    "pytest-mock>=3.0",
+    "responses>=0.20",
+    "ruff>=0.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/hamidvalad/requests-forwarder"
+Documentation = "https://github.com/hamidvalad/requests-forwarder#readme"
+Repository = "https://github.com/hamidvalad/requests-forwarder"
+Issues = "https://github.com/hamidvalad/requests-forwarder/issues"
+Changelog = "https://github.com/hamidvalad/requests-forwarder/blob/master/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["requests_forwarder*"]
+
+[tool.ruff]
+target-version = "py37"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
