@@ -1,0 +1,50 @@
+# ────────────────────── Python ──────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ────────────────────── Virtual Environments ───────
+venv/
+.venv/
+env/
+ENV/
+
+# ────────────────────── IDE / Editor ───────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ────────────────────── Testing ────────────────────
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# ────────────────────── Distribution ───────────────
+*.tar.gz
+*.whl
+RELEASE.md
+
+# ────────────────────── Environment Variables ──────
+.env
+.env.local
+.env.production
