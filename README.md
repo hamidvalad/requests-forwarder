@@ -301,6 +301,23 @@ Get the set of hostnames being intercepted. Returns an empty set when
 unrestricted internet access. The forwarder receives requests, relays them to
 the real target, and returns the response.
 
+Important: public hosted option and self-hosting
+
+- **Hosted free plan:** A public/free hosted endpoint is available at
+	https://requests-forwarder.ir. This hosted service offers a free plan that is
+	convenient for quick testing and small deployments but is subject to usage
+	limits (rate limits, payload size limits, and fair-use policies). Check the
+	live site for current limits and terms.
+
+- **Self-hosting:** For production or higher-throughput needs you can run
+	your own forwarder server (see the "Minimal forwarder (Flask)" example
+	below). Start a web server using the example implementation or your own
+	preferred framework, then pass its base URL to `setup_proxy()` via the
+	`proxy_base_url` parameter or `FORWARDER_URL` environment variable.
+
+Either use the hosted free plan (if its limits are acceptable) or provide the
+URL of your own forwarder as input to the library.
+
 ### Expected endpoint
 
 ```
@@ -491,6 +508,19 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 در برخی شبکه‌ها و سرورها، دسترسی مستقیم به برخی APIها (مثل `api.telegram.org`)
 مسدود یا ناپایدار است. با این کتابخانه، درخواست‌ها از طریق سرویس واسطی که
 روی سروری با دسترسی آزاد قرار دارد ارسال می‌شوند.
+
+توجه مهم: استفاده از سرویس میزبان یا راه‌اندازی محلی
+
+- **پلن رایگان میزبان:** یک نقطه انتهایی عمومی و رایگان در
+	https://requests-forwarder.ir در دسترس است. این سرویس برای تست و استقرارهای
+	کوچک مناسب است اما تحت محدودیت‌های مصرفی (مانند نرخ‌ محدودیت، اندازه‌ی
+	payload و سیاست‌های استفاده منصفانه) قرار دارد — برای اطلاعات دقیق‌تر
+	به سایت مراجعه کنید.
+
+- **راه‌اندازی محلی (Self-hosting):** برای استفاده‌های تولیدی یا حجم بالاتر
+	توصیه می‌شود سرور خود را مطابق نمونه‌های موجود در این مخزن (مثلاً مثال
+	Flask) راه‌اندازی کنید و آدرس آن را به `setup_proxy()` یا متغیر محیطی
+	`FORWARDER_URL` بدهید.
 
 ### سه حالت کاری
 

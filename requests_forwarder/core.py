@@ -74,7 +74,7 @@ DEFAULT_API_HOST: str = "api.telegram.org"
 """Convenience constant — the Telegram Bot API hostname (historical default)."""
 
 DEFAULT_PROXY_BASE_URL: str = "https://requests-forwarder.ir"
-"""Default forwarder base URL (no trailing slash)."""
+"""Default forwarder base URL (no trailing slash). Use the hosted free plan at https://requests-forwarder.ir or self-host per the documentation."""
 
 FORWARD_ENDPOINT: str = "/forward"
 """Path appended to the base URL when building the forwarder target."""
@@ -118,7 +118,10 @@ def setup_proxy(
     proxy_base_url:
         Root URL of the forwarder service.  Defaults to
         ``https://requests-forwarder.ir``.  A ``/forward`` path is appended
-        automatically.
+        automatically. Note: the public hosted endpoint provides a free plan
+        with limitations — see the README below and https://requests-forwarder.ir
+        for details. You can also host your own forwarder (see the examples
+        and project documentation) and pass its base URL as this parameter.
     hosts:
         List of hostnames to intercept.  Only requests to these hosts will be
         forwarded; everything else passes through untouched.

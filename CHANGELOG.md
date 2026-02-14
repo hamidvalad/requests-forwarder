@@ -30,3 +30,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `extra_hosts` is deprecated in favor of `hosts` (use `hosts` going forward).
 
+## [1.0.1] - 2026-02-14
+
+### Added
+
+- Documentation: explicit notice about the public hosted free plan at
+	`https://requests-forwarder.ir` and instructions to self-host the forwarder.
+	The README now explains that the hosted endpoint is convenient for testing
+	but subject to usage limits (rate limits, payload limits and fair-use
+	policies) and that users can run their own forwarder and provide its URL as
+	input.
+
+### Changed
+
+- Default forwarder base URL changed from `https://requests-forwarder.ir` to
+	`https://requests-forwarder.ir` to match the hosted endpoint scheme and the
+	documentation. Examples and configuration guidance updated accordingly.
+- Bumped package version to `1.0.1`.
+

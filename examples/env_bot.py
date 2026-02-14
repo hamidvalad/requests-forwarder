@@ -8,7 +8,9 @@ Usage:
     1. Set environment variables:
          export FORWARDER_TOKEN="your_forwarder_token"
          export BOT_TOKEN="your_telegram_bot_token"
-         # Optional — defaults to https://requests-forwarder.ir
+         # Optional — defaults to https://requests-forwarder.ir (public free plan)
+         # You can use the hosted free plan at https://requests-forwarder.ir
+         # (subject to limits) or set this to your own forwarder URL.
          export FORWARDER_URL="https://your-forwarder.example.com"
     2. Run:  python env_bot.py
 """
